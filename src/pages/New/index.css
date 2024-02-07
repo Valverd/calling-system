@@ -1,0 +1,14 @@
+form textarea {
+    resize: none;
+    height: 105px;
+}
+
+form input[type="radio"]{
+    margin: 15px 5px 15px 0;
+}
+
+
+/* aqui eu pego o input radio porém não aplico ao primeiro item dos que ele selecionar */
+form input[type="radio"]:not(:first-child){
+    margin-left: 15px;
+}

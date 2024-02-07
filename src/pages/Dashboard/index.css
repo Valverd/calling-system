@@ -1,0 +1,134 @@
+.new{
+    float: right;
+    margin-bottom: 1.5em;
+    background-color: #83bf02;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5em;
+    border: 0;
+    border-radius: 5px;
+    color: #fff;
+    transition: ease-in-out 0.3s;
+}
+
+.new:hover{
+    background-color: #5fd204;
+    transform: scale(1.05);
+}
+
+.new svg{
+    margin-right: 5px;
+}
+
+.dashboard{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.dashboard span{
+    margin: 2em;
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+table{
+    border: 1px solid #ccc;
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+
+table tr{
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    padding: 0.35em;
+}
+
+table th, table td{
+    padding: 0.6em;
+    text-align: center;
+}
+
+table th {
+    font-size: 0.85em;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+table td .action{
+    border: 0;
+    padding: 5px;
+    border-radius: 4px;
+    margin-right: 3px;
+    max-width: 35px;
+}
+
+table td .action:hover{
+    opacity: 0.8;
+}
+
+.div-btn-more{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.div-search-more{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.btn-more{
+    margin: 1.5em 0;
+    padding:  0.5em 1em;
+    background-color: #181c2e;
+    border: 0;
+    border-radius: 5px;
+    font-size: 1.05em;
+    color: #fff;
+}
+
+.btn-more:hover{
+    opacity: 0.9;
+}
+
+
+@media screen and (max-width: 600px) {
+    table{
+        border: 0;
+    }
+
+    table thead{
+        margin: -1px;
+        overflow: hidden;
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        width: 1px;
+    }
+
+    table tr{
+        border-bottom: 3px solid #ddd;
+        display: block;
+        margin-bottom: 0.6em;
+    }
+
+    table td{
+        border-bottom: 1px solid #ddd;
+        display: block;
+        font-size: 0.8em;
+        text-align: right;
+    }
+
+    table td::before{
+        content: attr(data-label);
+        float: left;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+}
