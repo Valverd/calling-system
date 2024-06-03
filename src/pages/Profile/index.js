@@ -42,7 +42,6 @@ export default function Profile() {
             .then((snapshot) => {
                 getDownloadURL(snapshot.ref).then(async (downloadURL) => {
             
-                    console.log(snapshot)
                     const docRef = doc(db, 'users', user.uid)
                     await updateDoc(docRef, {
                         avatarURL: downloadURL,
