@@ -38,10 +38,11 @@ export default function Profile() {
 
         const uploadRef = ref(storage, `images/${user.uid}/${imageAvatar.name}`)
 
-        const uploadTask = uploadBytes(uploadRef, imageAvatar)
+        uploadBytes(uploadRef, imageAvatar)
             .then((snapshot) => {
                 getDownloadURL(snapshot.ref).then(async (downloadURL) => {
-
+            
+                    console.log(snapshot)
                     const docRef = doc(db, 'users', user.uid)
                     await updateDoc(docRef, {
                         avatarURL: downloadURL,
